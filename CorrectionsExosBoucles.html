@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+       //Level1
+    // //    L'ordi doit choisir un numéro alétoire entre 1 et 10 
+    // Afficher un texte d'expiclations à destination du joueur afin qu'il saisisse une valeur entre 1 et 10 
+    // Si le choix de l'utilisateur est fauxle texte d'explications s'affiche de nouveau.
+    // Si le choix de l'utilisateur est juste, le programme s'arrête et affiche "bravo"
+       function getRandomInt(max) {
+           return Math.floor(Math.random() * max);
+       }
+
+       var goodNumber = getRandomInt (11);
+       var userNumber;
+       console.log(goodNumber);
+       while (goodNumber != userNumber) {
+        userNumber = prompt ("Devine un chiffre entre 1 et 10");
+       
+       if (goodNumber == userNumber) {
+            alert("Bravo!");
+       }
+
+       else {
+           alert ("Game Over Loser!!!");
+       }
+    }
+    </script> -->
+
+    <script>
+//     LEVEL 2
+// même consigne en rajoutant ceci:
+// A chaque réponse de l'utilisateur, l'ordi renvoie si la réponse est supérieure, inférieure ou inappropriée. 
+
+var playerNumber = prompt('Choose a number between 0 and 10: ');
+var goodNumber = Math.floor(Math.random() * 11);
+do{
+    if(goodNumber > playerNumber){
+        playerNumber = prompt('Wrong Answer : less than the target');
+    }
+    else if(goodNumber < playerNumber){
+        playerNumber = prompt('Wrong Answer : higher than the target');
+    }
+    else if(goodNumber !== playerNumber){
+        playerNumber = prompt('Wrong Answer : the input was inappropriate');
+    }
+}
+while(playerNumber != goodNumber) {
+    alert('You did it! Your number is equal to the target');
+}
+    </script> 
+
+</body>
+</html>
